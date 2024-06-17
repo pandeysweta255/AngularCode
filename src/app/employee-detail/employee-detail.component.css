@@ -1,0 +1,78 @@
+/* Overall Container */
+.employee-detail {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff; 
+}
+
+/* Heading */
+h3 {
+  color: #3f51b5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Detail Rows / Input Groups */
+div {
+  display: flex;
+  align-items: center;  
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  min-width: 100px; 
+  margin-right: 10px; 
+}
+
+/* Align ID and Name Labels */
+.detail-row:nth-child(1) label,
+.detail-row:nth-child(2) label  {
+  width: 250px; 
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"] {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+/* Focus State for Inputs */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+/* Placeholder Styling */
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+  color: #999;
+}
+
+/* Save Button */
+button {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}

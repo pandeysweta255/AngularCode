@@ -1,0 +1,31 @@
+<app-add-employee (onAddEmployee)="addEmployeeToList($event)"></app-add-employee>
+<h2>Employee List</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Department</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.id }}</td>
+      <td>
+        <a [routerLink]="['/employee-detail', employee.id]">{{ employee.name }}</a>
+      </td>
+      <td>{{ employee.salary | currency }}</td>
+      <td>{{ employee.department }}</td>
+      <td>
+        <button (click)="editEmployee(employee)">Edit</button>
+        <button (click)="deleteEmployee(employee.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-employee-detail *ngIf="selectedEmployee" [(employee)]="selectedEmployee" (employeeChange)="updateEmployee($event)"></app-employee-detail>
+

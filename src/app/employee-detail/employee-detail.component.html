@@ -1,0 +1,17 @@
+<div class="employee-detail" *ngIf="employee">
+  <h3>{{ employee.name }} Details</h3>
+  <div class="detail-row"><label>ID: </label>{{ employee.id }}</div>
+  <div class="detail-row">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="employee.name" name="name" />
+  </div>
+  <div class="detail-row">
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" [(ngModel)]="employee.salary" name="salary" />
+  </div>
+  <div class="detail-row">
+    <label for="department">Department:</label>
+    <input type="text" id="department" [(ngModel)]="employee.department" name="department" />
+  </div>
+  <button (click)="save()">Save</button>
+</div>

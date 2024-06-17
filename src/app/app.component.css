@@ -1,0 +1,23 @@
+
+.navbar {
+  background-color: #3f51b5; /* Primary color */
+  color: white;
+  padding: 15px;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Align items to the edges */
+  align-items: center; /* Vertically center items */
+}
+
+.navbar h1 {
+  margin: 0; /* Remove default heading margins */
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px; /* Add spacing between links */
+}
+
+.links a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
